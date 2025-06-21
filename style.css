@@ -1,0 +1,148 @@
+body{
+    /* bỏ margin mặc đỉnh để chỉnh */
+    margin: 0;
+    background-image: url(./images/background.png);
+    background-repeat: no-repeat;
+    /* full ngang, nếu muốn full dọc thì 100vh auto*/
+    background-size: 100vw auto;
+    /* vị trí để ảnh*/
+    background-position-y: top left;
+    /*cho phép cuộc ở cột y*/
+    overflow-y:scroll;
+    /*chiều cao tối thiếu (chỉnh cho bằng ảnh gốc để cuôn được)*/
+    min-height: 720px;
+}
+#sign_in{
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.login-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.25);
+  padding: 100px 30px;
+  border-radius: 20px;
+  box-shadow: 0 100px 250px rgba(0,0,0,0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  text-align: center;
+  max-width: 300px;
+  max-height: 2000px;
+  width: 100%;
+  color: #fff;
+}
+
+.login-container > #SignInLabel {
+  margin-bottom: 40px;
+  color: #333; /* đổi màu nhẹ nhàng, ít gắt hơn đen thuần */
+  font-family: 'Segoe UI', 'Roboto', sans-serif; /* font đẹp, hiện đại hơn */
+  font-size: 22px; /* to hơn một chút */
+  font-weight: bold; /* đậm hơn */
+  text-align: center; /* căn giữa cho đẹp */
+  letter-spacing: 1px; /* giãn cách chữ nhẹ */
+  text-shadow: 3px 3px 5px rgba(33, 13, 13, 0.2); /* bóng chữ nhẹ */
+}
+
+
+.login-container input {
+  margin: 20px auto;  /* margin trên dưới đều nhau để cân giữa 2 hr */
+  display: block;     /* đảm bảo input là khối để margin auto hoạt động */
+  font-size: 15px;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  text-align: center;
+  padding: 8px;
+  width: 90%;       
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-container button {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #3ddb55, #81C784); /* gradient xanh lá */
+  color: #090808;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.login-container button:hover {
+  background: linear-gradient(135deg, #105213, #587a5a); /* màu đậm hơn khi hover */
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.login-container button:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
+}
+
+.login-container.fade-out {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease;
+}
+
+.user {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: radial-gradient(circle at 30% 30%, #00c3ff, #005577);
+  border: 2px solid rgba(29, 75, 109, 0.8);
+  border-radius: 50%;
+  box-shadow:
+    0 0 12px rgba(33, 159, 209, 0.8),
+    0 0 20px rgba(68, 187, 235, 0.5) inset;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.user:hover {
+  box-shadow:
+    0 0 16px rgba(33, 159, 209, 1),
+    0 0 25px rgba(33, 159, 209, 0.7) inset;
+  transform: translate(-50%, -50%) scale(1.1);
+  cursor: pointer;
+}
+
+.user-name {
+  position: absolute;
+  top: 55px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: 140px;
+  padding: 4px 10px;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #222;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.user-name:hover {
+  background: rgba(33, 159, 209, 0.9);
+  color: #fff;
+}
+
+
+
