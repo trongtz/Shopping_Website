@@ -18,7 +18,6 @@ body{
     height: 100vh;
     flex-direction: column;
 }
-
 .login-container {
   position: absolute;
   top: 50%;
@@ -91,18 +90,15 @@ body{
   pointer-events: none;
   transition: opacity 1s ease;
 }
-
 .user {
   position: absolute;
   width: 50px;
   height: 50px;
-  background: radial-gradient(circle at 30% 30%, #00c3ff, #005577);
-  border: 2px solid rgba(29, 75, 109, 0.8);
+  border: 3px solid rgba(6, 31, 50, 0.8);
   border-radius: 50%;
-  box-shadow:
-    0 0 12px rgba(33, 159, 209, 0.8),
-    0 0 20px rgba(68, 187, 235, 0.5) inset;
-  transform: translate(-50%, -50%);
+  background-image: url(../images/avatar.jpg); /* sửa đường dẫn nếu cần */
+  background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -110,11 +106,12 @@ body{
   transition: all 0.3s ease;
 }
 
+
 .user:hover {
   box-shadow:
     0 0 16px rgba(33, 159, 209, 1),
     0 0 25px rgba(33, 159, 209, 0.7) inset;
-  transform: translate(-50%, -50%) scale(1.1);
+  transform: translate(-5%, -5%) scale(1.1);
   cursor: pointer;
 }
 
@@ -122,7 +119,7 @@ body{
   position: absolute;
   top: 55px;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  left: 50%;
+  left: 70%;
   transform: translateX(-50%);
   width: max-content;
   max-width: 140px;
