@@ -96,7 +96,7 @@ body{
   height: 50px;
   border: 3px solid rgba(6, 31, 50, 0.8);
   border-radius: 50%;
-  background-image: url(../images/avatar.jpg); /* sửa đường dẫn nếu cần */
+  background-image: url(./images/avatar.jpg); 
   background-size: cover;
   background-position: center;
   display: flex;
